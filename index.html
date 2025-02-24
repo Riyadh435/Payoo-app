@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>টাকা পাঠান পায়ো তে</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <div class="bg-blue-300 rounded-full w-20 h-20 mx-auto flex items-center justify-center mb-4">
+            <img class="mx-auto" src="./assets/logo.png" alt="">
+        </div>
+        <h1 class="text-2xl text-center mb-1">আপনাকে স্বাগতম।</h1>
+        <h2 class="text-xl font-bold text-center text-gray-800 mb-6">লগইন করুন</h2>
+        <form>
+            <div class="mb-4">
+                <label for="number" class="block text-gray-700 mb-1">মোবাইল নম্বর</label>
+                <input type="text" id="number" placeholder="আপনার নম্বর লিখুন" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div class="mb-4">
+                <label for="pin" class="block text-gray-700 mb-1">পিন</label>
+                <input type="password" id="pin" placeholder="আপনার পিন লিখুন" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+            <button type="submit" id="btn-login" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">লগইন</button>
+        </form>
+        <p class="text-center text-gray-600 mt-4">আপনার অ্যাকাউন্ট নেই? <a href="#" class="text-blue-500">নিবন্ধন করুন</a></p>
+    </div>
+    <script src="./scripts/login.js"></script>
+</body>
+</html>
