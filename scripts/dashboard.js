@@ -11,11 +11,21 @@ logout.addEventListener("click", function (e) {
 
 document.getElementById("sendmoney").addEventListener("click", function () {
   document.getElementById("send-money-section").style.display = "block";
-  document.getElementById("add-money-section").style.display = "none"; // Hide the send money section
+  document.getElementById("add-money-section").style.display = "none";
+  document.getElementById("payment-section").style.display = "none";
+  
+
 });
 document.getElementById("addmoney").addEventListener("click", function () {
+  
+  document.getElementById("add-money-section").style.display = "block";
   document.getElementById("send-money-section").style.display = "none";
-  document.getElementById("add-money-section").style.display = "block"; // Hide the send money section
+  document.getElementById("payment-section").style.display = "none";
+});
+document.getElementById("payment").addEventListener("click", function () {
+  document.getElementById("payment-section").style.display = "block";
+  document.getElementById("send-money-section").style.display = "none";
+  document.getElementById("add-money-section").style.display = "none";
 });
 
 
@@ -87,4 +97,35 @@ document.getElementById("sendMoneyBtn").addEventListener("click", function (even
     sendAmountInput.value = "";
 
     alert(`💸 ${amount} টাকা সফলভাবে পাঠানো হয়েছে!`);
+});
+
+
+// Payment
+document.getElementById("payMoneyBtn").addEventListener("click", function (event) {
+  event.preventDefault(); 
+
+  const mainBalanceElement = document.getElementById("main-balance");
+  let balance = parseFloat(mainBalanceElement.innerText);
+
+  const sendAmountInput = document.getElementById("pay-amount");
+  let amount = parseFloat(sendAmountInput.value);
+
+  // Ensure valid input
+  if (isNaN(amount) || amount <= 0) {
+      alert("❌ দয়া করে একটি বৈধ টাকার পরিমাণ লিখুন!");
+      return;
+  }
+
+  // Check if balance is sufficient
+  if (balance < amount) {
+      alert("❌ আপনার ব্যালেন্স যথেষ্ট নেই!");
+      return;
+  }
+  balance -= amount;
+  mainBalanceElement.innerText = balance.toFixed(2); 
+
+  
+  sendAmountInput.value = "";
+
+  alert(`💸 ${amount} টাকা সফলভাবে পাঠানো হয়েছে!`);
 });
