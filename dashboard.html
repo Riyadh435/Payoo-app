@@ -1,64 +1,142 @@
 <!DOCTYPE html>
 <html lang="bn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ড্যাশবোর্ড</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center px-4">
-    
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center px-4">
     <div class="bg-white shadow-lg rounded-lg w-full max-w-md p-6">
-      <header class="flex justify-between items-center mb-4 px-4 py-2 bg-white shadow-md rounded-lg">
+      <header
+        class="flex justify-between items-center mb-4 px-4 py-2 bg-white shadow-md rounded-lg"
+      >
         <div class="flex items-center gap-3">
-            <img src="./assets/logo.png" alt="লোগো" class="w-12 h-12 rounded-full shadow-md flex items-center justify-center">
-            <div class="flex flex-col">
-                <p class="text-gray-500 text-sm">আপনার ব্যালেন্স</p>
-                <h2 class="text-xl font-bold text-gray-800">
-                    <span class="text-green-600">২০০০</span> টাকা
-                </h2>
-            </div>
+          <img
+            src="./assets/logo.png"
+            alt="লোগো"
+            class="w-12 h-12 rounded-full shadow-md flex items-center justify-center"
+          />
+          <div class="flex flex-col">
+            <p class="text-gray-500 text-sm">আপনার ব্যালেন্স</p>
+            <h2 class="text-xl font-bold text-gray-800">
+              <span id="main-balance" class="text-green-600">2000</span> টাকা
+            </h2>
+          </div>
         </div>
-        <button id="btn-logout" class="bg-red-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-red-600 transition">
-            লগআউট
+        <button
+          id="btn-logout"
+          class="bg-red-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-red-600 transition"
+        >
+          লগআউট
         </button>
-    </header>
-    <hr class="my-4 border-gray-300">
-    
+      </header>
+      <hr class="my-4 border-gray-300" />
 
-       
-        <div class="mt-2">
-            <h1 class="font-bold text-lg">🔥 পেওওতে স্বাগতম!</h1>
-            <p class="p-2 text-sm text-gray-600">আমাদের সাথে সহজ এবং সুবিধাজনক আর্থিক পরিষেবা উপভোগ করুন। ক্যাশআউট চার্জ কম!</p>
+      <div class="mt-2">
+        <h1 class="font-bold text-lg">🔥 পেওওতে স্বাগতম!</h1>
+        <p class="p-2 text-sm text-gray-600">
+          আমাদের সাথে সহজ এবং সুবিধাজনক আর্থিক পরিষেবা উপভোগ করুন। ক্যাশআউট
+          চার্জ কম!
+        </p>
 
+        <div id="" class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+          <div id="sendmoney" class="p-2 bg-blue-100 rounded-lg flex flex-col items-center">
+            <img src="./assets/Group.png" alt="টাকা পাঠাও" class="w-7 h-7" />
+            <h3 class="text-gray-800 font-semibold text-sm mt-2">টাকা পাঠাও</h3>
+          </div>
+          
+          <div id="addmoney" class="p-2 bg-blue-100 rounded-lg flex flex-col items-center">
+            <img
+              src="./assets/money 1.png"
+              alt="টাকা যোগ করুন"
+              class="w-7 h-7"
+            />
+            <h3 class="text-gray-800 font-semibold text-sm mt-2">টাকা যোগ</h3>
+          </div>
+          <div class="p-2 bg-blue-100 rounded-lg flex flex-col items-center">
+            <img
+              src="./assets/transaction 1.png"
+              alt="পেমেন্ট"
+              class="w-7 h-7"
+            />
+            <h3 class="text-gray-800 font-semibold text-sm mt-2">পেমেন্ট</h3>
+          </div>
+          <div class="p-2 bg-blue-100 rounded-lg flex flex-col items-center">
+            <img
+              src="./assets/transaction 1.png"
+              alt="পেমেন্ট"
+              class="w-7 h-7"
+            />
+            <h3 class="text-gray-800 font-semibold text-sm mt-2">পেমেন্ট</h3>
+          </div>
+          <div class="p-2 bg-blue-100 rounded-lg flex flex-col items-center">
+            <img
+              src="./assets/transaction 1.png"
+              alt="পেমেন্ট"
+              class="w-7 h-7"
+            />
+            <h3 class="text-gray-800 font-semibold text-sm mt-2">পেমেন্ট</h3>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <!-- send money -->
+        <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto hidden" id="send-money-section">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">💰 টাকা পাঠান</h2>
             
-            <div id="sendmoney" class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
-                <div class="p-3 bg-blue-100 rounded-lg flex flex-col items-center">
-                    <img src="./assets/Group.png" alt="টাকা পাঠাও" class="w-10 h-10">
-                    <h3 class="text-gray-800 font-semibold text-sm mt-2">টাকা পাঠাও</h3>
-                </div>
-                <div class="p-3 bg-blue-100 rounded-lg flex flex-col items-center">
-                    <img src="./assets/Group (1).png" alt="ক্যাশ আউট" class="w-10 h-10">
-                    <h3 class="text-gray-800 font-semibold text-sm mt-2">ক্যাশ আউট</h3>
-                </div>
-                <div class="p-3 bg-blue-100 rounded-lg flex flex-col items-center">
-                    <img src="./assets/money 1.png" alt="মোবাইল রিচার্জ" class="w-10 h-10">
-                    <h3 class="text-gray-800 font-semibold text-sm mt-2">রিচার্জ</h3>
-                </div>
-                <div class="p-3 bg-blue-100 rounded-lg flex flex-col items-center">
-                    <img src="./assets/transaction 1.png" alt="পেমেন্ট" class="w-10 h-10">
-                    <h3 class="text-gray-800 font-semibold text-sm mt-2">পেমেন্ট</h3>
-                </div>
+            <div class="flex flex-col gap-4">
+              <label for="amount" class="text-sm text-gray-600">💵 টাকা পরিমাণ:</label>
+              <input
+                type="text"
+                id="send-amount"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="টাকার পরিমাণ লিখুন"
+                required
+              />
+              
+              <button 
+                id="sendMoneyBtn" 
+                class="bg-blue-500 text-white font-medium py-2 rounded-md hover:bg-blue-600 transition"
+              >
+                ✨ টাকা পাঠান
+              </button>
             </div>
-        </div>
+          </section>
 
-    
-        <div class="mt-6 text-center">
-            <p class="text-gray-600">আপনার শেষ লেনদেন: <span class="text-gray-800 font-semibold">৳ ১,০০০ পাঠানো হয়েছে</span></p>
-            <a href="#" class="text-blue-500 mt-2 inline-block">সম্পূর্ণ বিবরণ দেখুন</a>
-        </div>
+          <!-- add money -->
+          <section class="bg-white p-6 rounded-lg shadow-md max-w-md mx-auto hidden" id="add-money-section">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">💳 টাকা যোগ করুন</h2>
+            
+            <div class="flex flex-col gap-4">
+              <label for="add-amount" class="text-sm text-gray-600">➕ টাকা পরিমাণ:</label>
+              <input
+                type="text"
+                id="add-amount"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+                placeholder="টাকার পরিমাণ লিখুন"
+                required
+              />
+              
+              <button 
+                id="addMoneyBtn" 
+                class="bg-green-500 text-white font-medium py-2 rounded-md hover:bg-green-600 transition"
+              >
+                ✅ টাকা যোগ করুন
+              </button>
+            </div>
+          </section>
+          
+          
+      </div>
     </div>
     <script src="./scripts/dashboard.js"></script>
-</body>
+  </body>
 </html>

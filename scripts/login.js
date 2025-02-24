@@ -7,7 +7,7 @@ loginbtn.addEventListener('click', function(e) {
     if (number.value === '' || pin.value === '') {
         alert('অনুগ্রহ করে আপনার নম্বর এবং পিনটি দিন।');
     } else {
-        if (number.value === '01315486822' && pin.value === '1234') {
+        if (pin.value === '1234') {
             alert('লগইন সফল হয়েছে');
             window.location.href = './dashboard.html'; 
         } else {
